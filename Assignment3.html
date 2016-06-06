@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+	<ul>
+		<li>HTML Tutorial</li>
+		<li>MongoDB Tutorial</li>
+		<li>Python Tutorial</li>
+	</ul>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var children = $("ul").children("li");
+			//console.log(children.length);
+			for (var x = 0; x < children.length; x++) {
+				var text = $(children[x]).html();
+				//console.log(text)
+				var newtext = "<b>" + x + ":</b>" + text;
+				//console.log(newtext);
+				$(children[x]).html(newtext);
+			}
+		})
+	</script>
+	</body>
+</html>
